@@ -39,9 +39,22 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const fonts = ["Light", "Regular", "Medium", "Semibold", "Bold"];
+
     return (
-      <Html>
-        <Head />
+      <Html lang="en">
+        <Head>
+          {fonts.map((font) => (
+            <link
+              key={font}
+              rel="preload"
+              href={`/fonts/Calibre${font}.otf`}
+              as="font"
+              type="font/otf"
+              crossOrigin=""
+            />
+          ))}
+        </Head>
         <body>
           <Main />
           <NextScript />
