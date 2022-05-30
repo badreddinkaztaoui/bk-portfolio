@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    const fonts = ["Light", "Regular", "Medium", "Semibold", "Bold"];
+    const fonts = ["Light", "Regular", "Medium", "Semibold"];
 
     return (
       <Html lang="en">
@@ -50,7 +50,15 @@ export default class MyDocument extends Document {
               rel="preload"
               href={`/fonts/Calibre${font}.otf`}
               as="font"
-              type="font/otf"
+              crossOrigin=""
+            />
+          ))}
+          {fonts.map((font) => (
+            <link
+              key={font}
+              rel="preload"
+              href={`/fonts/SFMono${font}.ttf`}
+              as="font"
               crossOrigin=""
             />
           ))}

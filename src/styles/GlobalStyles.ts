@@ -1,39 +1,42 @@
 import { createGlobalStyle } from "styled-components";
-
-let fontFaces: Array<any> = [];
-const fonts = ["Light", "Regular", "Medium", "Semibold", "Bold"];
-
-for (let i = 0; i < fonts.length; i++) {
-  fontFaces.push(`
-    @font-face {
-      font-family: 'Calibre-${fonts[i]}';
-      src: url("/fonts/Calibre${fonts[i]}.otf");
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-    }
-  `);
-}
+import { CalibreFont, SFMonoFont } from "@/data/consts";
 
 export const GlobalStyles = createGlobalStyle`
 
 // Font faces 
-${fontFaces}
+${CalibreFont}
+${SFMonoFont}
 
 :root {
-    --clr-black: #000000;
-    --clr-white: #ffffff;
-    --clr-dark: #041C32;
-    --clr-night: #04293A;
-    --clr-blue: #064663;
-    --clr-yellow: #ECB365;
+  // Colors
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-light: #8892B0;
+  --clr-dark: #041C32;
+  --clr-night: #04293A;
+  --clr-blue: #064663;
+  --clr-yellow: #ECB365;
 
-    // Fonts
-    --font-light: "Calibre-Light";
-    --font-regular: "Calibre-Regular";
-    --font-medium: "Calibre-Medium";
-    --font-xbold: "Calibre-Semibold";
-    --font-bold: "Calibre-Bold";
+  // Font family
+  --calibre-light: "Calibre-Light";
+  --calibre-regular: "Calibre-Regular";
+  --calibre-medium: "Calibre-Medium";
+  --calibre-bold: "Calibre-Semibold";
+  --sfmono-light: "SFMono-Light";
+  --sfmono-regular: "SFMono-Regular";
+  --sfmono-medium: "SFMono-Medium";
+  --sfmono-bold: "SFMono-Semibold";
+
+  // Transitions
+  --easing: cubic-bezier(0.645,0.045,0.355,1);
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
+  // Other
+  --border-radius: 4px;
+  --nav-height: 100px;
+  --nav-scroll-height: 70px;
+  --tab-height: 42px;
+  --tab-width: 120px;
 }
 
 html {
@@ -47,9 +50,16 @@ html {
   }
 
   body {
-      background-color: var(--clr-dark);
       color: var(--clr-white);
-      font-family: var(--font-regular);
+      font-family: var(--calibre-regular);
+      background-color: var(--clr-dark);
+      font-size: var(--fz-md);
+      line-height: 1.3;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 
 `;
