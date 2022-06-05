@@ -1,12 +1,12 @@
+import Hero from "@/containers/Hero";
 import type { NextPage } from "next";
 import Layout from "src/layout";
-import styled from "styled-components";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Layout />
-    </div>
+    <Layout>
+      <Hero />
+    </Layout>
   );
 };
 

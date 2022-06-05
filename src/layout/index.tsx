@@ -5,12 +5,12 @@ import Header from "@/containers/Header";
 // Data
 import { me } from "@/data/me";
 
-const Layout = () => {
+const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <Container>
       <Header />
       <Content>
-        <Main>Hello Main page</Main>
+        <Main>{children}</Main>
       </Content>
       <SideContent pos="left">
         <ul>
@@ -24,9 +24,7 @@ const Layout = () => {
         </ul>
       </SideContent>
       <SideContent pos="right">
-        <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-          {process.env.NEXT_PUBLIC_EMAIL}
-        </a>
+        <a href={`mailto:admin@badrkaztaoui.com`}>admin@badrkaztaoui.com</a>
       </SideContent>
     </Container>
   );

@@ -17,6 +17,13 @@ ${SFMonoFont}
   --clr-blue: #064663;
   --clr-yellow: #ECB365;
 
+  // Status
+  --clr-status-primary: #ECB365;
+  --clr-status-error: #FA1451;
+  --clr-status-warning: #FAE52C;
+  --clr-status-success: #1DFA46;
+
+
   // Font family
   --calibre-light: "Calibre-Light";
   --calibre-regular: "Calibre-Regular";
