@@ -15,6 +15,10 @@ export const Main = styled.main`
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
+
+  @media screen and (max-width: 1900px) {
+    max-width: 90%;
+  }
 `;
 
 export const SideContent = styled.div<{ pos: "left" | "right" }>`
@@ -49,7 +53,7 @@ export const SideContent = styled.div<{ pos: "left" | "right" }>`
     padding: 10px;
     &:hover {
       transform: translateY(-3px);
-      color: var(--clr-yellow);
+      color: var(--clr-primary);
     }
   }
 
@@ -60,7 +64,6 @@ export const SideContent = styled.div<{ pos: "left" | "right" }>`
       a {
         font-size: 20px;
         margin: 0;
-        cursor: pointer;
       }
     }
   }

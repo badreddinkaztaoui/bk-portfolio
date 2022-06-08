@@ -9,16 +9,17 @@ ${SFMonoFont}
 
 :root {
   // Colors
+  --clr-primary: #2F8F9D;
+  --clr-secondary: #205375;
+  --clr-bg: #F9FFEB;
   --clr-black: #000000;
   --clr-white: #ffffff;
-  --clr-light: #8892B0;
-  --clr-dark: #041C32;
-  --clr-night: #04293A;
-  --clr-blue: #064663;
+  --clr-light: #06283D;
+  --clr-dark: #4B5D67;
   --clr-yellow: #ECB365;
 
   // Status
-  --clr-status-primary: #ECB365;
+  --clr-status-primary: #2F8F9D;
   --clr-status-error: #FA1451;
   --clr-status-warning: #FAE52C;
   --clr-status-success: #1DFA46;
@@ -54,13 +55,14 @@ html {
   *::before,
   *::after {
     box-sizing: inherit;
+    cursor: none;
+    
   }
 
   body {
       color: var(--clr-white);
       font-family: var(--calibre-regular);
-      background-color: var(--clr-dark);
-      font-size: var(--fz-md);
+      background-color: var(--clr-bg);
       line-height: 1.3;
   }
 

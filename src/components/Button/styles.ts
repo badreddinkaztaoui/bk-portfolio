@@ -11,7 +11,6 @@ export const Wrapper = styled.button<{
   font-size: 15px;
   background-color: transparent;
   transition: var(--transition);
-  cursor: pointer;
   ${({ status }) =>
     status === "outline"
       ? css`
