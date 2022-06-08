@@ -11,6 +11,12 @@ export const Wrapper = styled.button<{
   font-size: 15px;
   background-color: transparent;
   transition: var(--transition);
+
+  @media screen and (max-width: 426px) {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
   ${({ status }) =>
     status === "outline"
       ? css`

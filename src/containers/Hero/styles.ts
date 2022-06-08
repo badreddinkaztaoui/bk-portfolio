@@ -37,6 +37,9 @@ export const Title = styled.div`
     font-size: 22px;
     color: var(--clr-primary);
     margin-bottom: 1rem;
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+    }
   }
 
   h1,

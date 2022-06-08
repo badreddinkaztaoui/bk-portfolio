@@ -29,6 +29,9 @@ export const SideContent = styled.div<{ pos: "left" | "right" }>`
   position: fixed;
   display: flex;
   bottom: 0;
+  @media screen and (max-width: 426px) {
+    display: none;
+  }
   ${({ pos }) =>
     pos === "left"
       ? css`

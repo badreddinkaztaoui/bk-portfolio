@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Wrapper, Title, Content } from "./styles";
 import { RoughNotation } from "react-rough-notation";
 import Button from "@/components/Button";
-import { gsap } from "gsap";
 
 const Hero = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
   useEffect(() => {}, []);
 
   return (
@@ -12,13 +13,13 @@ const Hero = () => {
       <Content>
         <Title>
           <span className="intro">Hey folks 👋, I'm</span>
-          <h1>Badr Kaztaoui</h1>
+          <h1 ref={titleRef}>Badr Kaztaoui</h1>
           <h2>
             <RoughNotation
               type="underline"
               color="var(--clr-primary)"
-              padding={[0, 0, -8, 0]}
-              strokeWidth={5}
+              padding={[0, 0, -6, 0]}
+              strokeWidth={4}
               show
             >
               Creative
@@ -27,8 +28,8 @@ const Hero = () => {
             <RoughNotation
               type="box"
               color="var(--clr-primary)"
-              padding={[9, 0, 0, 0]}
-              strokeWidth={3}
+              padding={[12, 0, 0, 0]}
+              strokeWidth={2}
               animationDelay={1000}
               show
             >
